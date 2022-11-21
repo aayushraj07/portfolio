@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.UUID;
 
 public interface ProfileService {
-    ProfileResponseDto getById(UUID id) throws ChangeSetPersister.NotFoundException;
+    ProfileResponseDto getById(UUID id);
 
     List<ProfileResponseDto> getAll();
 }

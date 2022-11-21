@@ -26,9 +26,9 @@ public class Profile {
     @Column(name = "age")
     private Integer age;
 
-    @OneToMany(mappedBy = "profile")
-    private List<Skill> skills;
-
-    @OneToMany(mappedBy = "profile")
-    private List<SocialMeida> socialMeidas;
+//    @OneToMany(mappedBy = "profile")
+//    private List<Skill> skills;
+//
+//    @OneToMany(mappedBy = "profile")
+//    private List<SocialMeida> socialMeidas;
 }

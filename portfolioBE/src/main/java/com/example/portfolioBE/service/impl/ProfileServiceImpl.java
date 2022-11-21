@@ -29,7 +29,7 @@ public class ProfileServiceImpl implements ProfileService {
     private final ModelMapperEntityToDto modelMapper;
 
     @Override
-    public ProfileResponseDto getById(UUID id) throws ChangeSetPersister.NotFoundException {
+    public ProfileResponseDto getById(UUID id) {
         Profile profile = repository.findById(id).orElseThrow(() -> new NotFoundException(EVENT_NOT_FOUND));;
         return mapper.toDto(profile);
 //        ProfileResponseDto profileResponseDto = new ProfileResponseDto();
