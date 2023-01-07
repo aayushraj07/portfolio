@@ -26,9 +26,14 @@ public class Profile {
     @Column(name = "age")
     private Integer age;
 
-    @OneToMany(mappedBy = "profile")
+    @ManyToOne
+    private Group group;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "skill_id")
     private List<Skill> skills;
 
-    @OneToMany(mappedBy = "profile")
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "social_media_id")
     private List<SocialMeida> socialMeidas;
 }

@@ -21,7 +21,8 @@ public class Group {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "group")
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "profile_id")
     private List<Profile> profiles;
 
 
